@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(cors({
-    origin:["http://localhost:3000/","https://mern-task-app.onrender.com"],
+    origin:["http://localhost:3000/","https://mern-task-app-y711.onrender.com/"],
 }))
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
