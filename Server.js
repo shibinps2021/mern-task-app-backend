@@ -10,10 +10,11 @@ const PORT=process.env.PORT || 5000
 app.use(express.json())
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: true }));
-app.use(cors({
-    origin:"https://mern-task-app-y711.onrender.com",
-}))
-app.options('*',cors())
+let corsOptions = {
+    origin : ['https://mern-task-app-y711.onrender.com'],
+ }
+app.use(cors(corsOptions))
+// app.options('*',cors())
 // app.use(cors())
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
