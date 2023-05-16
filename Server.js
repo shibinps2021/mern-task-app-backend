@@ -12,8 +12,6 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(cors({
     origin:"https://mern-task-app-y711.onrender.com",
-    headers:["Content-Type],
-    credentials:True,
 }))
 app.options('*',cors())
 // app.use(cors())
