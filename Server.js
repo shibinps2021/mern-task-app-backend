@@ -10,13 +10,13 @@ const PORT=process.env.PORT || 5000
 app.use(express.json())
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: true }));
-let corsOptions = {
-    origin :'https://mern-task-app-y711.onrender.com',
-    methods: "GET,POST,PUT,DELETE",
- }
-app.use(cors(corsOptions))
+// let corsOptions = {
+//     origin :'https://mern-task-app-y711.onrender.com',
+//     methods: "GET,POST,PUT,DELETE",
+//  }
+// app.use(cors(corsOptions))
 // app.options('*',cors())
-// app.use(cors())
+app.use(cors())
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log('mongo connected');
