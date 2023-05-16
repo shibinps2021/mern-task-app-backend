@@ -11,7 +11,8 @@ app.use(express.json())
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: true }));
 let corsOptions = {
-    origin : ['https://mern-task-app-y711.onrender.com'],
+    origin :'https://mern-task-app-y711.onrender.com',
+    methods: "GET,POST,PUT,DELETE",
  }
 app.use(cors(corsOptions))
 // app.options('*',cors())
