@@ -15,6 +15,7 @@ app.use(cors({
     headers:["Content-Type],
     credentials:True,
 }))
+app.options('*',cors())
 // app.use(cors())
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
